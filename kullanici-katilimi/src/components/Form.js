@@ -16,7 +16,7 @@ const validationSchema = Yup.object({
     .matches(/[^0-9]/, "Şifre sadece sayı olamaz harf falan ekle"),
   terms: Yup.boolean().oneOf(
     [true],
-    "Zorunlu olması yasak ama kabul etmek zorunlu"
+    "İşaretlemek Zorunlu"
   ),
 });
 
