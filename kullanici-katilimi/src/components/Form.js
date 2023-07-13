@@ -67,9 +67,9 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="Form" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">İsim ve Soyisim</label>
+          <label name="İsim" htmlFor="name">İsim ve Soyisim</label>
           <input
             onChange={handleChange}
             type="text"
@@ -100,7 +100,7 @@ const Form = () => {
         </div>
         <div>
           <label htmlFor="terms">Kullanım Şartları</label>
-          <input
+          <input id="checkbox"
             onChange={handleChange}
             type="checkbox"
             name="terms"
@@ -108,7 +108,7 @@ const Form = () => {
           />
           {errors.terms && <p>{errors.terms}</p>}
         </div>
-        <button type="submit" disabled={isDisabled}>
+        <button className="button" type="submit" disabled={isDisabled}>
           Gönder
         </button>
       </form>
